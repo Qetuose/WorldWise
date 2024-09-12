@@ -37,6 +37,40 @@ function CitiesProvider({ children }) {
     }
   }
 
+  async function createCity(newCity) {
+    try {
+      setIsLoading(true);
+      const res = await fetch(`${BASE_URL}/cities`, {
+        method: "POST",
+        body: JSON.stringify(newCity),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await res.json();
+      setCities((cities) => [...cities, data]);
+    } catch {
+      alert("There was an error CREATING data...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
+  async function deleteCity(id) {
+    try {
+      setIsLoading(true);
+      await fetch(`${BASE_URL}/cities/${id}`, {
+        method: "DELETE",
+      });
+
+      setCities((cities) => cities.filter((city) => city.id !== id));
+    } catch {
+      alert("There was an error DELETING data...");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   const flagemojiToPNG = (flag) => {
     const countryCode = Array.from(flag, (codeUnit) => codeUnit.codePointAt())
       .map((char) => String.fromCharCode(char - 127397).toLowerCase())
@@ -48,7 +82,15 @@ function CitiesProvider({ children }) {
 
   return (
     <CitiesContext.Provider
-      value={{ cities, isLoading, currentCity, getCity, flagemojiToPNG }}
+      value={{
+        cities,
+        isLoading,
+        currentCity,
+        getCity,
+        flagemojiToPNG,
+        createCity,
+        deleteCity,
+      }}
     >
       {children}
     </CitiesContext.Provider>
