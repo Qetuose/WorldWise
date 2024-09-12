@@ -1,18 +1,6 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": "73930385"
-    },
-    {
       "cityName": "Madrid",
       "country": "Spain",
       "emoji": "🇪🇸",
@@ -82,6 +70,42 @@
       "position": {
         "lat": "54.882420555684504",
         "lng": "23.97266506112303"
+      }
+    },
+    {
+      "id": "3435",
+      "cityName": "Olmedo",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2024-09-12T15:15:45.242Z",
+      "notes": "4124",
+      "position": {
+        "lat": "41.27776973663146",
+        "lng": "-4.683221844711546"
+      }
+    },
+    {
+      "id": "e7ff",
+      "cityName": "Redondo",
+      "country": "Portugal",
+      "emoji": "🇵🇹",
+      "date": "2024-09-12T15:20:24.528Z",
+      "notes": "asdsad",
+      "position": {
+        "lat": "38.59975453558127",
+        "lng": "-7.58394950742836"
+      }
+    },
+    {
+      "id": "c284",
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2024-09-12T21:39:39.273Z",
+      "notes": "Nice 🗼 ",
+      "position": {
+        "lat": "48.8375121232724",
+        "lng": "2.356012412816742"
       }
     }
   ]
